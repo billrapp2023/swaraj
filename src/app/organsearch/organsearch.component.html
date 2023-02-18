@@ -1,0 +1,95 @@
+<br>
+<br>
+<br>
+
+
+<div class="container">
+     
+           <div class="form-row">
+             <div class="col">
+            <select class="btn btn-mini" class="form-control  md-4"style="width:500px;" (change)="organ($event)" >
+                    
+                            <option selected>Select</option>
+                            <option value="cornea">Cornea</option>
+                           <option value="kidneys">Kidneys</option>
+                             <option value="heart">Heart</option>
+                             <option value="lungs">Lungs</option>
+                            <option value="liver">Liver</option>
+                             <option value="pancreas">Pancreas</option>
+                            <option value="smallintestine">Small Intestine</option>
+                            <option value="larynx">Larynx</option>
+                            
+                </select>
+              </div>
+            <div class="col">
+              <select class="btn btn-mini"id="inputBG" class="form-control md-4" style="width:500px;" (change)="selected($event)">
+                              
+                <option selected>Select</option>
+                <option value="Apve">A Positive</option>
+                <option value="Anve">A Negative</option>
+                 <option value="Aunk">A Unknown</option>
+                 <option value="Bpve">B Positive</option>
+                <option value="Bnve">B Negative</option>
+                <option value="Bunk">B Unknown</option>
+                 <option value="ABpve">AB Positive</option>
+                <option value="ABnve">AB Negative</option>
+                <option value="ABunk">AB Unknown</option>
+                 <option value="Opve">O Positive</option>
+                <option value="Onve">O Negative</option>
+                 <option value="Ounk">O Unknown</option>
+                  <option value="Unk">Unknown</option>
+              
+    </select>
+            </div>
+           
+                    &nbsp;
+                    &nbsp;
+                   
+                
+                        
+                   
+                    
+           
+
+<div class="col">
+            <span class="input-group-btn">
+                    
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="submit()">Search</button>
+               
+              </span>
+
+            </div>
+            </div>
+        
+        <br>
+            
+            
+            <br>
+            <div class="container">
+                    <table class="table table-bordered">
+                            <thead class="thead-dark"style="text-align:center">
+                              <tr>
+                                
+                                <th scope="col">Donor Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Blood Group</th>
+                                <th scope="col">Phone Number</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let item of this.data">
+                 
+                               
+                            <td>{{item.Name}}</td>
+                            <td>{{item.Address}}</td>                                   
+                            <td>{{item.Bloodgroup}}</td>
+                            <td>{{item.Contactno}}</td>
+                            
+                          </tr>
+                            </tbody>
+                          </table>
+            </div>
+            
+           
+        </div>

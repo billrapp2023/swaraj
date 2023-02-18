@@ -1,0 +1,218 @@
+<!-- <br>
+<br>
+<div class="container">
+    <div class="input-group">
+            <table class="table table-bordered">
+                    <thead class="thead-dark">
+                      <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Hosp Name</th>
+                            <th scope="col">Hosp Address</th>
+                            <th scope="col">Ownership</th>
+                            <th scope="col">Hosp Head</th>
+                            <th scope="col">Hosp ID</th>
+                            <th scope="col">Hosp Cat</th>
+                            <th scope="col">Hosp Lic no</th>
+                            <th scope="col">Year of Est</th>
+                            <th scope="col">Hosp Email</th>
+                            <th scope="col">Phn Num</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of this.viewhosp">
+                           
+                                <td>{{item.no}}</td>
+                            <td>{{item.Hname}}</td>
+                            <td>{{item.Hadrs}}</td>                                   
+                            <td>{{item.Ownership}}</td>
+                              <td>{{item.HHead}}</td>
+                              <td>{{item.HHid}}</td>
+                              <td>{{item.Hcat}}</td>
+                              <td>{{item.Hlic}}</td>
+                              <td>{{item.YOE}}</td>
+                              <td>{{item.Hemail}}</td>
+                              <td>{{item.Hphn}}</td>
+                              <td><button type="button" class="btn btn-primary">UPDATE</button> &nbsp;&nbsp;
+                              <button type="button" class="btn btn-danger">DELETE</button></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  
+                  <table class="table table-bordered">
+                    <thead class="thead-dark">
+                      <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Hosp Name</th>
+                            <th scope="col">Hosp Address</th>
+                            <th scope="col">Ownership</th>
+                            <th scope="col">Hosp Head</th>
+                            <th scope="col">Hosp ID</th>
+                            <th scope="col">Hosp Cat</th>
+                            <th scope="col">Hosp Lic no</th>
+                            <th scope="col">Year of Est</th>
+                            <th scope="col">Hosp Email</th>
+                            <th scope="col">Phn Num</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                           
+                                <td>{{item.updatehosp.no}}</td>
+                            <td><input type="text" name="{{item.updatehosp.Hname}}" value="{{item.updatehosp.Hname}}" class="form-control" ></td>
+                            <td><input type="text" name="{{item.updatehosp.Hadrs}}" value="{{item.updatehosp.Hadrs}}" class="form-control" ></td>                                   
+                            <td><input type="text" name="{{item.updatehosp.Ownership}}" value="{{item.updatehosp.Ownership}}" class="form-control" ></td>
+                              <td><input type="text" name="{{item.updatehosp.HHead}}" value="{{item.updatehosp.HHead}}" class="form-control" ></td>
+                              <td><input type="text" name="{{item.updatehosp.HHid}}" value="{{item.updatehosp.HHid}}" class="form-control" ></td>
+                              <td><input type="text" name="{{item.updatehosp.Hcat}}" value="{{item.updatehosp.Hcat}}" class="form-control" ></td>
+                              <td><input type="text" name="{{item.updatehosp.Hlic}}" value="{{item.updatehosp.Hlic}}" class="form-control" ></td>
+                              <td><input type="text" name="{{item.updatehosp.YOE}}" value="{{item.updatehosp.YOE}}" class="form-control" ></td>
+                              <td><input type="text" name="{{item.updatehosp.Hemail}}" value="{{item.updatehosp.Hemail}}" class="form-control" ></td>
+                              <td><input type="text" name="{{item.updatehosp.Hphn}}" value="{{item.updatehosp.Hphn}}" class="form-control" ></td>
+                              <td><button type="button" class="btn btn-info btn-sm" id="{{item.Employee_ID}}" (click)="update($event)">Update</button> &nbsp;&nbsp;
+                                <td scope="row"> <input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.no"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.Hname"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.Hadrs"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.Ownership"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.HHead"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.HHid"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.Hcat"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.Ownership"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.YOE"></td>
+                                <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.Hemail"></td>
+                                 <td><input type="text" name="" id="" class="form-control" [(ngModel)]="this.updatehosp.Hphn"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="20" align="right">
+                            <input type="submit" value="Update" (click)="upd()">
+                        </td>
+                      </tr>   
+                    </tbody>
+                  </table>
+                   
+    </div>  
+    
+
+    <br>
+<br> -->
+
+
+        <br>
+                    <div class="container">
+                      <div class="text-center">
+                        <table class="table table-bordered">
+                                <thead class="thead-dark" style="text-align:center">
+                                  <tr>
+                                    
+                                   
+                            <!-- <th scope="col">No</th> -->
+                            <th scope="col">No</th>
+                            <th scope="col">Hosp Name</th>
+                            <th scope="col">Hosp Address</th>
+                            <th scope="col">Ownership</th>
+                            <th scope="col">Hosp Head</th>
+                            
+                            <th scope="col">Head Email</th>
+
+                            <th scope="col">Hosp Cat</th>
+                            <th scope="col">Hosp Lic no</th>
+                            <th scope="col">Year of Est</th>
+                            <th scope="col">Hosp Email</th>
+                            <th scope="col">Phn Num</th>
+                            <th scope="col">Telephone Number</th>
+                            <th scope="col"></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let item of this.data">
+                                      <td>{{item.no}}</td>
+                                      <td>{{item.HospName}}</td>
+                                      <td>{{item.HospAddrs}}</td>                                   
+                                      <td>{{item.HospOwn}}</td>
+                                        <td>{{item.HospHead}}</td>
+                                        
+                                        <td>{{item.Heademail}}</td>
+                                        <td>{{item.HospCat}}</td>
+                                        <td>{{item.HospLicNum}}</td>
+                                        <td>{{item.YOE}}</td>
+                                        <td>{{item.Heademail}}</td>
+                                        <td>{{item.HospPhNum}}</td>
+                                        <td>{{item.HospTel}}</td>
+                                    <!-- <td> <input type="text" name="this.updatehosp.no"  value="{{item.no}}" class="form-control" > </td>
+                                    <td><input type="text" name="{{item.Hname}}" value="{{item.Hname}}" class="form-control" ></td>
+                                    <td><input type="text" name="{{item.Hadrs}}" value="{{item.Hadrs}}" class="form-control" ></td>                                   
+                                    <td><input type="text" name="{{item.Ownership}}" value="{{item.Ownership}}" class="form-control" ></td>
+                                      <td><input type="text" name="{{item.HHead}" value="{{item.HHead}}" class="form-control" ></td>
+                                      <td><input type="text" name="{{item.HHid}}" value="{{item.HHid}}" class="form-control" ></td>
+                                      <td><input type="text" name="{{item.Hcat}}" value="{{item.Hcat}}" class="form-control" ></td>
+                                      <td><input type="text" name="{{item.Hlic}}" value="{{item.Hlic}}" class="form-control" ></td>
+                                      <td><input type="text" name="{{item.YOE}}" value="{{item.YOE}}" class="form-control" ></td>
+                                      <td><input type="text" name="{{item.Hemail}}" value="{{item.Hemail}}" class="form-control" ></td>
+                                      <td><input type="text" name="{{item.Hphn}}" value="{{item.Hphn}}" class="form-control" ></td>
+                                    
+                                      <br> -->
+                                      <td>
+                                      <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                    </td>
+                                  </tr>
+
+                        
+                                </tbody>
+                    
+                        </table>
+                 
+
+          <br>
+          <br>
+          <br>
+          <br>
+
+<!-- 
+                  <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">No</th>
+                            <th scope="col">Hosp Name</th>
+                            <th scope="col">Hosp Address</th>
+                            <th scope="col">Ownership</th>
+                            <th scope="col">Hosp Head</th>
+                            <th scope="col">Head ID</th>
+                            <th scope="col">Head Email</th>
+
+                            <th scope="col">Hosp Cat</th>
+                            <th scope="col">Hosp Lic no</th>
+                            <th scope="col">Year of Est</th>
+                            <th scope="col">Hosp Email</th>
+                            <th scope="col">Phn Num</th>
+                            
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <tr>
+                      <td scope="row"> <input type="text" name="this.updatehosp.no" id="" class="form-control" [(ngModel)]="this.updatehosp.no"></td>
+                      <td><input type="text" name="this.updatehosp.HospName" value="this.updatehosp.Hname" id="" class="form-control" [(ngModel)]="this.updatehosp.HospName"></td>
+                      <td><input type="text" name="this.updatehosp.HospAddrs" id="" class="form-control" [(ngModel)]="this.updatehosp.HospAddrs"></td>
+                      <td><input type="text" name="this.updatehosp.HospOwn" id="" class="form-control" [(ngModel)]="this.updatehosp.HospOwn"></td>
+                      <td><input type="text" name="this.updatehosp.HospHead" id="" class="form-control" [(ngModel)]="this.updatehosp.HospHead"></td>
+                      <td><input type="text" name="this.updatehosp.HeadId" id="" class="form-control" [(ngModel)]="this.updatehosp.HeadId"></td>
+                      <td><input type="text" name="this.updatehosp.Heademail" id="" class="form-control" [(ngModel)]="this.updatehosp.Heademail"></td>
+                      <td><input type="text" name="this.updatehosp.HospCat" id="" class="form-control" [(ngModel)]="this.updatehosp.HospCat"></td>
+                      <td><input type="text" name="this.updatehosp.HospLicNum" id="" class="form-control" [(ngModel)]="this.updatehosp.HospLicNum"></td>
+                      <td><input type="text" name="this.updatehosp.YOE" id="" class="form-control" [(ngModel)]="this.updatehosp.YOE"></td>
+                     
+                       <td><input type="text" name="this.updatehosp.HospEmailid" id="" class="form-control" [(ngModel)]="this.updatehosp.HospEmailid"></td>
+                       <td><input type="text" name="this.updatehosp.HospPhNum" id="" class="form-control" [(ngModel)]="this.updatehosp.HospPhNum"></td>
+                      </tr>        
+                      <tr>
+                        <td colspan="19" align="right">
+                            <input type="submit" value="Update" (click)="upd()">
+                        </td>
+                      </tr>           
+                    </tbody>
+                  </table> -->
+
+                </div>
+              </div>

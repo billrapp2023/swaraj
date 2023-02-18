@@ -1,0 +1,446 @@
+<form ngNativeValidate #loginForm="ngForm">
+    <br>
+    <h1 align="center"><u>DONOR REGISTRATION</u></h1>
+    <br>
+    
+      <div class="container">
+            
+          
+                      <div class="row">
+                            <div class="col"style="text-align:center">
+                              <label for="inputFullName">Full Name</label>
+    
+                            </div>
+                            :
+                            <div class="col">
+                              <input type="text" class="form-control" id="inputDFName" placeholder="Full Name" [(ngModel)]="this.adddonor.DonorName"  required name="this.adddonor.DonorName" [ngModelOptions]="{standalone: true}"style="width:500px"pattern="[A-Za-z]">
+                            </div>
+                          </div>
+                          <br>
+                          <div class="row">
+                   
+                                <div class="col">
+                                       <label for="inputGender">Gender</label>
+                                       
+                                   </div>
+                                   :
+                                   <div class="col">
+                                   <div class="form-check form-check-inline">
+                                   
+                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male"[(ngModel)]="this.adddonor.DonorGender" name="this.adddonor.DonorGender" required [ngModelOptions]="{standalone: true}">
+                                     <label class="form-check-label" for="inlineRadio1">Male</label>
+                                   &nbsp; &nbsp;
+                                   </div>
+               
+                                 <div class="form-check form-check-inline">
+                                     
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Female"[(ngModel)]="this.adddonor.DonorGender"name="this.adddonor.DonorGender" required [ngModelOptions]="{standalone: true}">
+                                       <label class="form-check-label" for="inlineRadio2">Female</label>
+                                       &nbsp; &nbsp;
+                                   </div>
+               
+                                 <div class="form-check form-check-inline">
+                                     
+                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="Transgender"[(ngModel)]="this.adddonor.DonorGender"name="this.adddonor.DonorGender" required [ngModelOptions]="{standalone: true}">
+                                         <label class="form-check-label" for="inlineRadio3">Transgender</label>
+                                         &nbsp; &nbsp;
+                                     </div>
+                                     <div class="form-check form-check-inline">
+                                     
+                                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="Others"[(ngModel)]="this.adddonor.DonorGender"name="this.adddonor.DonorGender" required [ngModelOptions]="{standalone: true}">
+                                           <label class="form-check-label" for="inlineRadio4">Others</label>
+                                           &nbsp; &nbsp;
+                                       </div>
+                                   </div>
+                             </div>
+                             <br>
+    
+    
+                          <div class="form-group">
+                                <div class="row">
+                                  <div class="col"><label for="formGroupDobInput">DOB</label></div>
+                                  :
+                                    <div class="col"> <input type="date" class="form-control" id="formGroupLicNumInput" placeholder="DD-MM-YYYY"[(ngModel)]="this.adddonor.DonorDOB"name="this.adddonor.DonorDOB" required [ngModelOptions]="{standalone: true}"max="2003-01-01" min="1930-01-01"onkeydown="return false"></div>
+                                     </div>
+                                  </div>
+                          
+              <div class="form-group">
+                  <div class="row">
+                      <div class="col">
+                        <label for="inputCAddress">Address </label>
+                      </div>
+                    :
+                    <div class="col">
+                       <textarea class="form-control"rows="5" placeholder="Contact Address"[(ngModel)]="this.adddonor.DonorAddrs"name="this.adddonor.DonorAddrs" required [ngModelOptions]="{standalone: true}"></textarea>
+                    </div>
+                  </div>
+                   
+                </div>
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationDefault03">City</label>
+                    <input type="text" class="form-control" id="validationDefault03" placeholder="City" [(ngModel)]="this.adddonor.DonorCity"  required name="this.adddonor.DonorCity" [ngModelOptions]="{standalone: true}"pattern="[A-Za-z]">
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationDefault04">State</label>
+                    <input type="text" class="form-control" id="State" placeholder="State" [(ngModel)]="this.adddonor.State"  required name="this.adddonor.State" [ngModelOptions]="{standalone: true}"pattern="[A-Za-z]">
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationDefault05">Pincode</label>
+                    <input type="text" class="form-control" id="Pinno" placeholder="Pincode"[(ngModel)]="this.adddonor.Pinno"  required name="this.adddonor.Pinno" [ngModelOptions]="{standalone: true}"pattern="[0-9]{4}"maxlength="4">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                  <label for="formOccupation">Occupation</label></div>
+                  <div class="col"> <input type="text" class="form-control" id="Occupation" placeholder="Occupation"[(ngModel)]="this.adddonor.Occupation"  required name="this.adddonor.Occupation" [ngModelOptions]="{standalone: true}"pattern="[A-Za-z]">
+                </div></div><br>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col"><label for="inputBG">Blood Group</label></div>
+                      : 
+                      <div class="col"> 
+                        <select id="inputBG" class="form-control" [(ngModel)]="this.adddonor.DonorBG"name="this.adddonor.DonorBG" required [ngModelOptions]="{standalone: true}">
+                          <option selected>Select</option>
+                                          <option value="Apve">A Positive</option>
+                                          <option value="Anve">A Negative</option>
+                                           <option value="Aunk">A Unknown</option>
+                                           <option value="Bpve">B Positive</option>
+                                          <option value="Bnve">B Negative</option>
+                                          <option value="Bunk">B Unknown</option>
+                                           <option value="ABpve">AB Positive</option>
+                                          <option value="ABnve">AB Negative</option>
+                                          <option value="ABunk">AB Unknown</option>
+                                           <option value="Opve">O Positive</option>
+                                          <option value="Onve">O Negative</option>
+                                           <option value="Ounk">O Unknown</option>
+                                            <option value="Unk">Unknown</option>
+                        </select>
+                      </div>
+                     
+                  </div>
+                    </div>
+      
+               
+                
+                      
+                
+                             
+                      
+                                          
+                                
+                                                  <div class="form-group">
+                                                      <div class="row">
+                                                        <div class="col"><label for="formGroupContNumInput">Contact Number</label></div>
+                                                        :
+                                                        
+                                                          <div class="col"> <div class="input-group-prepend">
+                                                            <div class="input-group-text">+91</div>
+                                                          
+                                                          <input type="number" class="form-control" id="contactnumber" placeholder="Contactnumber"[(ngModel)]="this.adddonor.DonorPhNum"  required name="this.adddonor.DonorPhNum" [ngModelOptions]="{standalone: true}">
+                                                        </div></div>
+                                                      </div>
+                                                        </div>
+                                                        
+                                                        
+                                                                <br>
+    
+                                  <h3 align="center"><u>HEALTH SECURITY CHECK</u></h3>       
+                                  <br>
+                                  <div class="row">
+                                    <div class="col">
+                                      Did you suffer of any diseases ?
+                                    </div>:
+                                    <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Diseasecheck1" name="Diseasecheck1" class="custom-control-input" value="True"[(ngModel)]="this.adddonor.Diseasecheck"  required name="this.adddonor.Diseasecheck" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Diseasecheck1">Yes</label>
+                                      </div></div>
+                                      <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Diseasecheck2" name="Diseasecheck2" class="custom-control-input" value="False"[(ngModel)]="this.adddonor.Diseasecheck"  required name="this.adddonor.Diseasecheck" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Diseasecheck2">No</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col">
+                                      Did you have any allergies?
+                                    </div>:
+                                    <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Allergycheck1" name="Allergycheck1" class="custom-control-input"value="True"[(ngModel)]="this.adddonor.Allergycheck"  required name="this.adddonor.Allergycheck" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Allergycheck1">Yes</label>
+                                      </div></div>
+                                      <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Allergycheck2" name="Allergycheck2" class="custom-control-input"value="False"[(ngModel)]="this.adddonor.Allergycheck"  required name="this.adddonor.Allergycheck" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Allergycheck2">No</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                                    <div class="col">
+                                     Other Allergies
+                                    </div>:
+                                    <div class="col">
+                                      <textarea class="form-control"rows=3 [(ngModel)]="this.adddonor.Otherallergies"  required name="this.adddonor.Otherallergies" [ngModelOptions]="{standalone: true}"></textarea>
+                                      </div>
+                                    </div>
+                                 <br>
+    
+                                  <div class="row">
+                                    <div class="col">
+                                      Have you ever had +ve Blood test for Hbs Ag,HCV,HIV ?
+                                    </div>:
+                                    <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Std1" name="Std1" class="custom-control-input"value="True"[(ngModel)]="this.adddonor.Std"  required name="this.adddonor.Std" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Std1">Yes</label>
+                                      </div></div>
+                                      <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Std2" name="Std2" class="custom-control-input"value="False"[(ngModel)]="this.adddonor.Std"  required name="this.adddonor.Std" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Std2">No</label>
+                                      </div>
+                                    </div>
+                                  </div>
+    
+                                  <br>
+                                  <div class="row">
+                                    <div class="col">
+                                      Did you have any cardiac problem ?
+                                    </div>:
+                                    <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Cardiac1" name="Cardiac1" class="custom-control-input"value="True"[(ngModel)]="this.adddonor.Cardiac"  required name="this.adddonor.Cardiac" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Cardiac1">Yes</label>
+                                      </div></div>
+                                      <div class="col-3">
+                                      <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="Cardiac2" name="Cardiac2" class="custom-control-input"value="False"[(ngModel)]="this.adddonor.Cardiac"  required name="this.adddonor.Cardiac" [ngModelOptions]="{standalone: true}">
+                                        <label class="custom-control-label" for="Cardiac2">No</label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                 <br>
+                                 <div class="row">
+                                  <div class="col">
+                                    Did you have any bleeding disorder ?
+                                  </div>:
+                                  <div class="col-3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                      <input type="radio" id="Bleeding1" name="Bleeding1" class="custom-control-input"value="True"[(ngModel)]="this.adddonor.Bleeding"  required name="this.adddonor.Bleeding" [ngModelOptions]="{standalone: true}">
+                                      <label class="custom-control-label" for="Bleeding1">Yes</label>
+                                    </div></div>
+                                    <div class="col-3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                      <input type="radio" id="Bleeding2" name="Bleeding2" class="custom-control-input"value="False"[(ngModel)]="this.adddonor.Bleeding"  required name="this.adddonor.Bleeding" [ngModelOptions]="{standalone: true}">
+                                      <label class="custom-control-label" for="Bleeding2">No</label>
+                                    </div>
+                                  </div>
+                                </div>
+                               <br>
+                               <div class="row">
+                                <div class="col">
+                                  Do you take any Medication ?
+                                </div>:
+                                <div class="col-3">
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="Medication1" name="Medication1" class="custom-control-input"value="True"[(ngModel)]="this.adddonor.Medication"  required name="this.adddonor.Medication" [ngModelOptions]="{standalone: true}">
+                                    <label class="custom-control-label" for="Medication1">Yes</label>
+                                  </div></div>
+                                  <div class="col-3">
+                                  <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="Medication2" name="Medication2" class="custom-control-input"value="False"[(ngModel)]="this.adddonor.Medication"  required name="this.adddonor.Medication" [ngModelOptions]="{standalone: true}">
+                                    <label class="custom-control-label" for="Medication2">No</label>
+                                  </div>
+                                </div>
+                              </div>
+                             <br>
+                                  <div class="row">
+                                    <div class="col">
+                                      Last Donating Date:
+                                    </div>:
+                                  <div class="col">
+                                    <input type="date" placeholder="DD-MM-YY"[(ngModel)]="this.adddonor.LastDondate"  required name="this.adddonor.LastDondate" [ngModelOptions]="{standalone: true}"max="2020-03-17" min="1999-01-01"onkeydown="return false">
+                                  </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col">
+                                      Next Donating Date:
+                                    </div>:
+                                  <div class="col">
+                                    <input type="date" placeholder="DD-MM-YY"[(ngModel)]="this.adddonor.NxtDondate"  required name="this.adddonor.NxtDondate" [ngModelOptions]="{standalone: true}"max="2021-01-01" min="2020-03-17"onkeydown="return false">
+                                  </div>
+                                  </div>
+                                  <br>
+                                  <div class="row">
+                   
+                                    <div class="col">
+                                           <label for="inputTime">How Often you donate blood</label>
+                                           
+                                       </div>
+                                       :
+                                       <div class="col">
+                                       <div class="form-check form-check-inline">
+                                       
+                                         <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="Once in a Year"[(ngModel)]="this.adddonor.DonorTime"name="this.adddonor.DonorTime" required [ngModelOptions]="{standalone: true}">
+                                         <label class="form-check-label" for="inlineRadio5">Once in a Year</label>
+                                       &nbsp; &nbsp;
+                                       </div>
+                      
+                                     <div class="form-check form-check-inline">
+                                         
+                                            <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio6" value="Twice a year"[(ngModel)]="this.adddonor.DonorTime"name="this.adddonor.DonorTime" required [ngModelOptions]="{standalone: true}">
+                                           <label class="form-check-label" for="inlineRadio6">Twice a year</label>
+                                           &nbsp; &nbsp;
+                                       </div>
+                      
+                                     <div class="form-check form-check-inline">
+                                         
+                                             <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio7" value="Thrice a year"[(ngModel)]="this.adddonor.DonorTime"name="this.adddonor.DonorTime" required [ngModelOptions]="{standalone: true}">
+                                             <label class="form-check-label" for="inlineRadio7">Thrice a year</label>
+                                             &nbsp; &nbsp;
+                                         </div>
+                                         <div class="form-check form-check-inline">
+                                         
+                                               <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio8" value="More than 3 times"[(ngModel)]="this.adddonor.DonorTime"name="this.adddonor.DonorTime" required [ngModelOptions]="{standalone: true}">
+                                               <label class="form-check-label" for="inlineRadio8">More than 3 times</label>
+                                               &nbsp; &nbsp;
+                                           </div>
+                                       </div>
+                                 </div>
+                                 <br>
+                                 
+                                 <div class="row">
+                                  <div class="col"><label for="inputOrgan">Donating</label></div>:
+                                  <div class="col">
+                                          <div class="custom-control custom-checkbox">
+                                                  <input type="checkbox" class="custom-control-input" id="blood"[(ngModel)]="this.adddonor.blood"  required name="this.adddonor.blood" [ngModelOptions]="{standalone: true}" (change)="checkValue1(this.adddonor.blood?'A':'B','blood')">
+                                                  <label class="custom-control-label" for="blood">Blood</label>
+                                                </div>
+                                  </div>
+                          </div>
+                          <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                    <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="organs">
+                                            <label class="custom-control-label" for="organs">Organs</label>
+                                          </div>
+                            </div>
+                    </div>
+                                  <div class="row">
+                                          <div class="col"></div>
+                                          <div class="col"></div>
+                                          <div class="col"></div>
+                                          <div class="col">
+                                                  <div class="custom-control custom-checkbox">
+                                                          <input type="checkbox" class="custom-control-input" id="Corneas"value="Organ" [(ngModel)]="this.adddonor.cornea"  required name="this.adddonor.cornea" [ngModelOptions]="{standalone: true}" (change)="checkValue2(this.adddonor.cornea?'A':'B','cornea')">
+                                                          <label class="custom-control-label" for="Corneas">Corneas</label>
+                                                        </div>
+                                          </div>
+                                                        <div class="col">
+                                                              <div class="custom-control custom-checkbox">
+                                                                      <input type="checkbox" class="custom-control-input" id="Kidneys"value="Organ"[(ngModel)]="this.adddonor.kidneys"  required name="this.adddonor.kidneys" [ngModelOptions]="{standalone: true}" (change)="checkValue3(this.adddonor.kidneys?'A':'B','Kidneys')">
+                                                                      <label class="custom-control-label" for="Kidneys">Kidneys</label>
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                          <div class="custom-control custom-checkbox">  
+                                                                                  <input type="checkbox" class="custom-control-input" id="Heart"[(ngModel)]="this.adddonor.heart"  required name="this.adddonor.heart" [ngModelOptions]="{standalone: true}" (change)="checkValue4(this.adddonor.heart?'A':'B','Heart')">
+                                                                                  <label class="custom-control-label" for="Heart">Heart</label>
+                                                                                </div>
+                                                                                </div>
+                                  </div>
+                          <div class="row">
+                                          <div class="col"></div>
+                                          <div class="col"></div>
+                                          <div class="col"></div>
+                                          <div class="col">
+                                                  <div class="custom-control custom-checkbox">
+                                                          <input type="checkbox" class="custom-control-input" id="Lungs"value="Organ"[(ngModel)]="this.adddonor.lungs"  required name="this.adddonor.lungs" [ngModelOptions]="{standalone: true}" (change)="checkValue5(this.adddonor.lungs?'A':'B','lungs')" >
+                                                          <label class="custom-control-label" for="Lungs">Lungs</label>
+                                                        </div>
+                                          </div>
+                                                        <div class="col">
+                                                              <div class="custom-control custom-checkbox">
+                                                                      <input type="checkbox" class="custom-control-input" id="Liver"value="Organ"[(ngModel)]="this.adddonor.liver"  required name="this.adddonor.liver" [ngModelOptions]="{standalone: true}" (change)="checkValue6(this.adddonor.liver?'A':'B','liver')">
+                                                                      <label class="custom-control-label" for="Liver">Liver</label>
+                                                                    </div>
+                                                                    </div>
+                                                                    <div class="col">
+                                                                          <div class="custom-control custom-checkbox">
+                                                                                  <input type="checkbox" class="custom-control-input" id="Pancreas"value="Organ"[(ngModel)]="this.adddonor.pancreas"  required name="this.adddonor.pancreas" [ngModelOptions]="{standalone: true}" (change)="checkValue7(this.adddonor.pancreas?'A':'B','pancreas')">
+                                                                                  <label class="custom-control-label" for="Pancreas">Pancreas</label>
+                                                                                </div>
+                                                                                </div>
+                                                                                    
+                                 
+                   </div>
+                    
+                   <div class="row">
+                      <div class="col"></div>
+                      <div class="col"></div>
+                      <div class="col"></div>
+                      <div class="col">
+                              <div class="custom-control custom-checkbox">
+                                      <input type="checkbox" class="custom-control-input" id="Intestine"value="Organ"[(ngModel)]="this.adddonor.smallintestine"  required name="this.adddonor.smallintestine" [ngModelOptions]="{standalone: true}" (change)="checkValue8(this.adddonor.smallintestine?'A':'B','smallintestine')">
+                                      <label class="custom-control-label" for="Intestine">Small Intestine</label>
+                                    </div>
+                      </div>
+                                    <div class="col">
+                                          <div class="custom-control custom-checkbox">
+                                                  <input type="checkbox" class="custom-control-input" id="Larynx"value="Organ"[(ngModel)]="this.adddonor.larynx"  required name="this.adddonor.larynx" [ngModelOptions]="{standalone: true}" (change)="checkValue2(this.adddonor.larynx?'A':'B','larynx')">
+                                                  <label class="custom-control-label" for="Larynx">Larynx</label>
+                                                </div>
+                                                </div>
+                                                <div class="col">
+                                                      
+                                                            </div>
+                   </div><br><br>
+                                                        <div class="text-center">
+                                                            <button type="submit" (click)="Submit()" [disabled]="loginForm.form.invalid" class="btn btn-primary btn-lg">Submit</button>
+                                                          </div>
+    
+      </div>
+    
+    </form>
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div id="print-section">
+              <table class="table table-bordered" >
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col">Donor ID</th>
+                          <th scope="col">Donor Name</th>
+                          <th scope="col">Address</th>
+                          <th scope="col">Blood Group</th>
+                          <th scope="col">Phone Number</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of this.data">
+                          <td>{{item.did}}</td>
+                          <td>{{item.Name}}</td>
+                          <td>{{item.Address}}</td>
+                          <td>{{item.Bloodgroup}}</td>
+                          <td>{{item.Contactno}}</td>
+                          <td> <button type="button"  id="{{item.did}}" (click)="update($event)" class="btn btn-primary btn-sm">Update</button></td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <button (click)="print()">print</button>
+      </div>

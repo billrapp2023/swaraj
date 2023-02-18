@@ -1,0 +1,422 @@
+<!-- Common view -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color:#201818;font-family:Arial;"  *ngIf="commonView">
+  <a class="navbar-brand" routerLink="">
+    <img src=".\assets\img\LOGOFINAL.png" width="100" height="140" alt="">
+  </a>
+      
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink=""><div style="color: #EEE9E9;font-size:19px;letter-spacing:2px;">HOME</div><span class="sr-only">(current)</span></a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="aboutus">
+            <div style="color: #EEE9E9;font-size:19px;letter-spacing:2px;"> ABOUT US</div></a>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <li class="nav-item active">
+            <a class="nav-link" routerLink="gallery">
+              <div style="color: #EEE9E9;font-size:19px;letter-spacing:2px;">GALLERY</div></a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+          <!-- <li class="nav-item active">
+            <a class="nav-link" routerLink="test">
+              <div style="color: #EEE9E9;font-size:19px;letter-spacing:2px;">TEST</div></a> -->
+          <!-- </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        <li class="nav-item active">
+          <a class="nav-link " routerLink="contactform" tabindex="-1" >
+            <div style="color: #EEE9E9;font-size:19px;letter-spacing:2px;">CONTACT US</div></a>
+      </ul>
+      <table>
+        <tr>
+          <td>
+              <input class="form-control mr-sm-2" type="text" placeholder="Username" aria-label="Search" [(ngModel)]="this.logi.userName">
+          </td>
+          <td>
+              <input class="form-control mr-sm-2" type="password" placeholder="Password" aria-label="Search" [(ngModel)]="this.logi.passWord">
+          </td>
+          <td>
+              <button class="btn btn-outline-light my-2 my-sm-0" type="Login" (click)="login()">Login</button>
+          </td> 
+        </tr>
+        <tr>
+          <td>
+            <div style="font-size:20px;">
+            <a routerLink="/addhospital">Register Now!</a>
+          </div>
+          </td>
+          <td>
+              <div style="font-size:20px;text-align:right;">
+                
+                  <div class="container">
+                      <a routerLink="#" data-target="#pwdModal" data-toggle="modal">Forgot my password!</a>
+                    </div>
+                    
+                    <!--modal-->
+                    <div id="pwdModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                      <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header"style="border-color:black;border-width:1px">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"style="float:left:10px;">×</button>
+                              <h1 class="text-center"style="float-left:20px">What's My Password?</h1>
+                          </div>
+                          <div class="modal-body">
+                              <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="text-center">
+                                              
+                                              <p>If you have forgotten your password you can reset it here.</p>
+                                                <div class="panel-body">
+                                                    <fieldset>
+                                                        <div class="form-group">
+                                                            <input class="form-control input-lg" placeholder="E-mail Address" name="email" type="email" [(ngModel)]="this.fg.mail">
+                                                        </div>
+                                                        <input class="btn btn-lg btn-primary btn-block" value="Send My Password" (click)="send()" type="submit">
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </div>
+                          <div class="modal-footer">
+                              <div class="col-md-12">
+                              <button class="btn btn-dark" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                              </div>	
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+        
+    </div>
+   
+  </nav>
+
+
+
+
+<!-- staff -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#201818;" *ngIf="hospitalEmpView">
+    &nbsp;
+    &nbsp;
+        <a class="navbar-brand" routerLink="head">
+          <img src="/assets/img/LOGOFINAL.png" width="100"height="140"  alt="">
+        </a>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      
+      &nbsp;
+    <a class="navbar-brand" href="staff">
+        <button type="button" class="btn btn-outline-light">HOME</button></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    &nbsp;
+    &nbsp;
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="navbar-brand " routerLink="donorsearch">
+            <button type="button" class="btn btn-outline-light">BLOOD DONORS </button><span class="sr-only">(current)</span></a>
+        &nbsp;
+        &nbsp;
+       
+        <!-- <a class="navbar-brand" routerLink="bloodstatusver2">
+            <button type="button" class="btn btn-outline-light">BLOOD STATUS</button></a> -->
+        &nbsp;&nbsp;
+        &nbsp;
+       
+        <a class="navbar-brand" routerLink="organsearch">
+            <button type="button" class="btn btn-outline-light">ORGAN DONORS</button></a>
+        &nbsp;&nbsp;
+       
+        <a class="navbar-brand" routerLink="donationinfotable">
+            <button type="button" class="btn btn-outline-light">DONATION INFO</button></a>&nbsp;&nbsp;
+            <a class="navbar-brand" routerLink="employeeprofile">
+              <button type="button" class="btn btn-outline-light">PROFILE</button></a>&nbsp;&nbsp;
+              
+            <a class="navbar-brand">&nbsp;&nbsp;
+              <button type="button" class="btn btn-outline-light" routerLink="complaint">COMPLAINTS&FEEDBACKS</button></a>
+          
+      </div>
+    </div>
+    <div class="d-flex flex-column bd-highlight mb-3">
+    <div class=".naright">
+       
+       
+       
+          <div class="p-2 bd-highlight">
+              &nbsp;&nbsp;
+              &nbsp;  
+              &nbsp; &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+              &nbsp;
+             
+              &nbsp;
+              &nbsp;
+              &nbsp;<button type="button" class="btn btn-outline-light btn-sm" (click)="logout()">Log out</button>
+              <!-- <button type="button" class="btn btn-outline-light btn-sm" (click)="logout()">Log out</button> -->
+            </div>
+        </div>
+        </div>
+  </nav>
+
+  <!-- admin -->
+  
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#201818;"*ngIf="adminView">
+      &nbsp;
+      &nbsp;
+          <a class="navbar-brand" routerLink="admin">
+            <img src="/assets/img/LOGOFINAL.png" width="100"height="140"  alt="">
+          </a>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        
+        &nbsp;
+      <a class="navbar-brand" routerLink="approve">
+          <button type="button" class="btn btn-outline-light btn-lg">ADD HOSPITAL</button></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      &nbsp;
+      &nbsp;
+  
+      &nbsp; &nbsp;
+      &nbsp;
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="navbar-brand " routerLink="viewhospital">
+              <button type="button" class="btn btn-outline-light btn-lg">VIEW HOSPITAL</button><span class="sr-only">(current)</span></a>
+          &nbsp;
+          &nbsp;
+          &nbsp; &nbsp;
+          &nbsp;
+          <a class="navbar-brand" routerLink="viewcomlplaint">
+              <button type="button" class="btn btn-outline-light  btn-lg">VIEW COMPLAINT</button></a>
+          &nbsp;&nbsp;
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          <a class="navbar-brand" routerLink="viewfeedback1">
+              <button type="button" class="btn btn-outline-light  btn-lg">VIEW FEEDBACK</button></a>
+          &nbsp;
+          &nbsp; &nbsp;
+          &nbsp;
+          &nbsp; 
+          <a class="navbar-brand">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="background-color:#201818;color:#EEE9E9;height:47px;border-color:white;letter-spacing:2px">
+              UPDATE
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <!-- <a class="dropdown-item" routerLink="updategallery">Gallery</a> -->
+              <a class="dropdown-item"  routerLink="updateabout">About us</a>
+              <!-- <a class="dropdown-item" routerLink="#">Carousel</a> -->
+              <a class="dropdown-item" routerLink="updatecontactus">Contactus</a>
+              <!-- <a class="dropdown-item"  routerLink="#">E-mail</a> -->
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+      <div class="d-flex flex-column bd-highlight mb-3">
+      <div class=".naright">
+         
+          
+          
+            <div class="p-2 bd-highlight">
+                &nbsp;&nbsp;  
+                &nbsp;  
+                
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <button type="button" class="btn btn-outline-light btn-sm" (click)="logout()">Log out</button>
+              </div>
+          </div>
+          </div>
+    </nav>
+
+    <!-- head -->
+    <nav class="navbar navbar-expand-lg navbar-light"style="background-color:#201818;" *ngIf="hospitalHeadView">
+        &nbsp;
+        &nbsp;
+            <a class="navbar-brand" routerLink="head">
+              <img src="/assets/img/LOGOFINAL.png" width="100"height="140"  alt="">
+            </a>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          
+          &nbsp;
+        <a class="navbar-brand" routerLink="donorsearch">
+            <button type="button" class="btn btn-outline-light">BLOOD DONORS</button></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        &nbsp;
+        &nbsp;
+    
+        <a class="navbar-brand" routerLink="donoredit">
+          <button type="button" class="btn btn-outline-light">DONOR EDIT</button></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      &nbsp;
+      &nbsp;
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="navbar-brand " routerLink="bloodstatus">
+                <button type="button" class="btn btn-outline-light">BLOOD STATUS</button><span class="sr-only">(current)</span></a>
+            &nbsp;
+            &nbsp;
+            
+            <a class="navbar-brand" routerLink="organsearch">
+                <button type="button" class="btn btn-outline-light">ORGAN DONORS</button></a>
+            &nbsp;&nbsp;
+            &nbsp;
+            <div class="navbar-brand dropdown">
+              <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                EMPLOYEE
+              </a>
+            
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item"  routerLink="addemployee">ADD EMPLOYEE</a>
+                <a class="dropdown-item"  routerLink="viewemployee">VIEW EMPLOYEE</a>
+                
+              </div>
+            </div>
+
+          
+                &nbsp;&nbsp;&nbsp;
+                <div class="navbar-brand dropdown">
+                  <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    COMPLAINTS/FEEDBACKS
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item"  routerLink="complaint">COMPLAINT</a>
+                    <a class="dropdown-item"  routerLink="feedback">FEEDBACK</a>
+                    
+                  </div>
+                </div>
+               
+                  <a class="navbar-brand" routerLink="alert">;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-outline-light">NOTIFICATION</button></a>
+                    <a class="navbar-brand" routerLink="profile">;&nbsp;&nbsp;
+                      <button type="button" class="btn btn-outline-light">PROFILE</button></a>
+                      <a class="navbar-brand" routerLink="home">
+                        <button type="button" class="btn btn-outline-light">home</button></a>&nbsp;&nbsp;
+          </div>
+        
+        <div class="d-flex flex-column bd-highlight mb-3">
+        <div class=".naright">
+           
+            <br>
+              
+                  &nbsp;&nbsp;
+                  &nbsp;  
+                  &nbsp; &nbsp;
+                  &nbsp;
+                  &nbsp;
+                 
+                 
+                  <button type="button" class="btn btn-outline-light btn-sm" (click)="logout()">Log out</button>
+                </div>
+              </div>
+            </div>
+      </nav>
+    
+      
+
+      <!-- <div id="print-section">
+     Put items here
+      </div>
+      <button (click)="print()">print</button> -->
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+<footer class="flex-rw">
+  
+  <ul class="footer-list-top">
+    <li>
+      <h6 class="footer-list-header">About Us</h6></li>
+    <li><p style="color: #8db9ed;">Despite the increase in the number of donors, blood remains in short supply during emergencies, mainly attributed to the lack of information and accessibility. We positively believe this tool can overcome most of these challenges by effectively connecting the blood donors with the blood recipients</p></li>
+    
+
+    
+  </ul>
+  <ul class="footer-list-top">
+    <li>
+      <h6 class="footer-list-header">Contact Us</h6></li>
+
+
+    <li><i class="fas fa-phone generic-anchor"style="font-size:20px;">: +912233122112</i></li>
+     <li><i class="fas fa-phone generic-anchor"style="font-size:20px;">: +912233122112</i></li>
+    <li><i class="fas fa-envelope generic-anchor"style="font-size:20px;">: avafoundationsltd@gmail.com</i></li>
+    <li><i class="fa fa-home generic-anchor ">: No.20,madras mail</i></li>
+
+      
+  </ul>
+  <ul class="footer-list-top">
+    <li id='help'>
+      <h4 class="footer-list-header"></h4></li>
+     
+    <li><a routerLink="" class="generic-anchor footer-list-anchor" itemprop="significantLink">HOME</a></li>
+    <li><a routerLink="contactus" class="generic-anchor footer-list-anchor" itemprop="significantLink">COMPLAINT</a></li>
+    <li><a routerLink="feedback"class="generic-anchor footer-list-anchor" itemprop="significantLink">FEEDBACK</a></li>
+    
+   
+  </ul>
+  <!-- <section class="footer-social-section flex-rw">
+
+      <span class="footer-social-overlap footer-social-icons-wrapper">
+      <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+      <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+      <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+      <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+      </span>
+  </section> -->
+ <section class="footer-bottom-section flex-rw">
+    <div class="footer-bottom-wrapper">   
+    <i class="fa fa-copyright" role="copyright"></i> 
+        2019 Ava Foundation- All Rights Reserved - 
+      <!-- 2019 Pavilion in <address class="footer-address" role="company address">Bergen, NY</address><span class="footer-bottom-rights"> - All Rights Reserved - </span> -->
+    </div>
+    
+  </section>
+</footer>
+
+
+

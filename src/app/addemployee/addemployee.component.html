@@ -1,0 +1,88 @@
+<form [formGroup]="registerForm" #form=ngForm (ngSubmit)="onSubmit(form.value)">
+<br>
+<h1 align="center">ADD EMPLOYEE</h1>
+<br>
+  <div class="container">
+
+    <div class="form-row">
+      <div class="col">
+        <label for="inputDesign">Employee Name</label>
+      </div>
+    :
+    <div class="col">
+      <input type="text" placeholder="Employee Name" formControlName="Fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Fname.errors }"  pattern="[a-zA-Z][a-zA-Z\s]*"/>
+      <div *ngIf="submitted && f.Fname.errors" class="invalid-feedback">
+          <div *ngIf="f.Fname.errors.required">Employee Name is required</div>
+          <div *ngIf="f.Fname.errors.pattern">NAME MUST BE IN CHARACTERS</div>
+      </div>
+    </div>
+      </div>
+      <br>
+          <div class="form-group">
+              <div class="row">
+                
+                  <div class="col">
+                    <label for="inputDesign">Designation </label>
+                  </div>
+                :
+                <div class="col">
+                  <input type="text" placeholder="Designation" formControlName="Designtn" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Designtn.errors }"  pattern="[a-zA-Z][a-zA-Z\s]*"/>
+                  <div *ngIf="submitted && f.Designtn.errors" class="invalid-feedback">
+                      <div *ngIf="f.Designtn.errors.required">Designation is required</div>
+                      <div *ngIf="f.Designtn.errors.pattern">Designation MUST BE IN CHARACTERS</div>
+                  </div>
+                </div>
+              </div>
+               
+            </div>
+            
+            
+           
+              <br>
+             
+            
+                    <div class="form-group">
+                        <div class="row">
+                          <div class="col"><label for="formGroupEmpId2Input">Employee ID</label></div>
+                          :
+                            <div class="col"> <input type="number" placeholder="Empid Number" formControlName="Empid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Empid.errors }" minlength="6" maxlength="6" pattern="^\d{6}$"/> <div *ngIf="submitted && f.Empid.errors" class="invalid-feedback">
+                              <div *ngIf="f.Empid.errors.required">Employee ID is required</div>
+                              <div *ngIf="f.Empid.errors.pattern">Employee ID must be in digits and it must be contain 6 digits</div>
+                          </div></div>
+                             </div>
+                          </div>
+               
+                                         
+                                        
+                                              <div class="form-group">
+                                                <div class="row">
+                                                  <div class="col"> <label for="inputEmail4">Email ID</label></div>
+                                                  : 
+                                                   <div class="col"> <input type="text" placeholder="Email" formControlName="Emailid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Emailid.errors }" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                                                    <div *ngIf="submitted && f.Emailid.errors" class="invalid-feedback">
+                                                        <div *ngIf="f.Emailid.errors.required">Email is required</div>
+                                                        <div *ngIf="f.Emailid.errors.pattern">Email must be a valid email address</div>
+                                                    </div></div>
+                                                   
+                                                </div>
+                                                
+                                              </div>
+                            
+                                              <div class="form-group">
+                                                  <div class="row">
+                                                    <div class="col"><label for="formGroupContNum2Input">Contact Number</label></div>
+                                                    :
+                                                      <div class="col">  <input type="number" placeholder="Phone Number" formControlName="EmpPhnum" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.EmpPhnum.errors }" minlength="10" maxlength="10" pattern="^\d{10}$"/>
+                                                        <div *ngIf="submitted && f.EmpPhnum.errors" class="invalid-feedback">
+                                                            <div *ngIf="f.EmpPhnum.errors.required">Phone Number is required</div>
+                                                            <div *ngIf="f.EmpPhnum.errors.pattern">Phone Number must be in digits and it must be contain 10 digits</div>
+                                                        </div></div>
+                                                       </div>
+                                                    </div>
+                                                    
+                                                    <div class="text-center">
+                                                        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                                      </div>
+
+  </div>
+</form>

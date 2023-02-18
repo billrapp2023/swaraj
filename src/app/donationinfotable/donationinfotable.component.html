@@ -1,0 +1,165 @@
+<br>
+<br>
+<br>
+<h1 align="center"><u>BLOOD DONATION INFORMATION</u></h1>
+
+<div style="margin-left:150px;">
+  
+     
+    <div class="form-row">
+
+     <div class="col">
+       <select class="btn btn-mini" class="form-control md-4" style="width:500px;" (change)="recepSelected($event)">
+        <option *ngFor="let item of this.RecepientList" value="{{item.did}}">{{item.Name}}</option>          
+         <option selected>Select</option>
+         
+       
+</select>
+     </div>
+     <!-- <div class="col">
+       <select class="btn btn-mini"id="inputBG" class="form-control md-4" style="width:200px;">
+        <option *ngFor="let item of this.Donate" value="{{item.did}}">{{item.organs}}</option>             
+         <option selected>Select</option>
+         
+       
+</select>
+     </div> -->
+
+           <div class="col">
+     <select class="btn btn-mini" class="form-control  md-4"style="width:500px;" (change)="donorSelected($event)">
+             
+                     <option selected>Select</option>
+                     <option *ngFor="let item of this.DonaorList" value="{{item.did}}">{{item.Name}}</option>
+                     
+                     
+         </select>
+       </div>
+    
+            
+            
+         
+                 
+            
+             
+    
+
+<div class="col">
+     <span class="input-group-btn">
+             
+             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="submit()">Insert</button>
+        
+       </span>
+
+     </div>
+     </div>
+      </div>
+
+<br>
+<!-- <div style="margin-left:1470px;">
+  <a routerLink="/addonor">
+<button class="btn btn-primary " style="width:120px;text-align:center;letter-spacing:3px;">Add</button></a>
+</div>
+<br>
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col"></th>
+          <th scope="col"colspan="9">Donor Details</th>
+         
+         
+          
+        </tr>
+      </thead>
+    <thead class="thead-dark">
+      <tr>
+          <th scope="col">No</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Address</th>
+        <th scope="col">Blood Group</th>
+        <th scope="col">Blood Donation Date</th>
+        <th scope="col">Next Donation Date</th>
+        <th scope="col">Medical Ailements</th>
+        <th scope="col">PhNo</th>
+        
+       <th></th>
+        
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of this.kk">
+        <th scope="row">{{item.no}}</th>
+        <td>{{item.Name}}</td>
+        <td>{{item.DOB}}</td>
+        <td>{{item.Gender}}</td>
+        <td>{{item.Address}}</td>
+         <td>{{item.Bloodgroup}}</td>
+         <td>{{item.NextDonatingDate}}</td>
+        <td>{{item.nxtbddate}}</td>
+         <td>{{item.dmedical}}</td>
+         <td>{{item.Contactno}}</td>
+          
+           <td><button type="button" class="btn btn-danger">Update</button></td>
+      </tr>
+      
+    </tbody>
+  </table> -->
+  <div style="margin-left:1470px;">
+    <a routerLink="/blooddonorform">
+  <button class="btn btn-primary " style="width:120px;text-align:center;letter-spacing:3px;">Add</button></a>
+  </div>
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col"></th>
+          
+         
+          <th scope="col"colspan="7">Recepient Details</th>
+          <th scope="col"colspan="4">Donor Details</th>
+        </tr>
+      </thead>
+    <thead class="thead-dark">
+      <tr>
+          
+        <th></th>
+        <th scope="col">Full Name</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Gender</th>
+       
+        <th scope="col">Blood Group</th>
+        <th scope="col">Medical Description</th>
+        <th scope="col">Patient ID</th>
+        
+        <th scope="col">Doctor's Name</th>
+        <th scope="col">Donor Name</th>
+        <th scope="col">Blood group</th>
+        <th scope="col">Donor Phone Number</th>
+        <th scope="col">Donated</th>
+        <!-- <th scope="col"></th>
+        <th scope="col"></th> -->
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of this.data">
+        <th scope="row">{{item.recid}}</th>
+        
+          <td>{{item.Name}}</td>
+         <td>{{item.DOB}}</td>
+           <td>{{item.Gender}}</td>
+           <td>{{item.Bloodgroup}}</td>
+            <td>{{item.Description}}</td>
+           <td>{{item.PatientID}}</td>
+            <td>{{item.Doctorname}}</td>
+            <td>{{item.Bloodgroup}}</td>
+            <td>{{item.Description}}</td>
+           <td>{{item.PatientID}}</td>
+            <td>{{item.Doctorname}}</td>
+          
+      </tr>
+      
+    </tbody>
+  </table>
+  <br><br>

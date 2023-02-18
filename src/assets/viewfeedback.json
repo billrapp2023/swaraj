@@ -1,0 +1,37 @@
+[
+    {
+        "no":"1",
+        "fullname":"Hari",
+        "emailid":"hari@yahoo.com",
+        "feedback":"improve the interface of the website"
+    
+    },
+    {
+        "no":"2",
+        "fullname":"sarin",
+        "emailid":"sarin@gmail.com",
+        "feedback":"it takes longer to load the site"
+    
+    },
+    {
+        "no":"3",
+        "fullname":"gj",
+        "emailid":"gj1234@hotmail.com",
+        "feedback":"alert system is not working properly"
+    
+    },
+    {
+        "no":"4",
+        "fullname":"kurian",
+        "emailid":"kurian@yahoo.com",
+        "feedback":"site is down most of the time"
+    
+    },
+    {
+        "no":"5",
+        "fullname":"sasi",
+        "emailid":"sasi@yahoo.com",
+        "feedback":"improve the interface of the website"
+    
+    }
+]

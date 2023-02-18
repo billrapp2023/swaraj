@@ -1,0 +1,90 @@
+
+<div class="row">
+        <div class="col-1">
+            </div>
+            
+        <div class="col-8">
+                <br>  
+               
+<br>
+
+        <div class="round1" style="height:260px;">
+                <div>
+                        <div class="row">
+                        <div class="col-2">
+                            <div class="px-md-5">
+                                <img src="{{this.data2[0].image}}"  width="150" height="170" alt="..."  style="margin-top:13px ; border:1px solid black">
+                </div></div>
+                            <div class="col-9 text-center" >
+                                <h5 style="letter-spacing:4px;font-size:34px;">{{this.data2[0].HospName}}</h5>
+                                <p style="letter-spacing:2px;font-size:20px">HEAD : {{this.data2[0].HospHead}}</p>
+                                <p style="letter-spacing:2px;font-size:20px">Phone : {{this.data2[0].HospPhNum}}</p>
+                                <p style="letter-spacing:2px;font-size:20px">Telephone : {{this.data2[0].HospTel}}</p>
+                                <p style="letter-spacing:2px;font-size:20px">Address:{{this.data2[0].HospAddrs}}</p>
+                            
+                        
+                            </div>
+                </div>
+              </div>
+  
+    
+</div>
+        <div class="round1"style="height:400px" >
+                <div >
+                        <div class="row  px-md-5" style="margin-top:20px;line-height:180%;">
+                    
+                                {{this.data2[0].About}}
+                </div>
+                
+              </div>
+  
+    
+</div>
+</div>
+
+<div class="col-2" style="margin-left: 2%;">
+        <div class="row">
+        <br>    
+                <div class="round1 px-md-2" style="height:300px;width:350px;background-color: #F7F7F7;">
+  <div style="text-align:center;">
+    <h3><u>ALERT</u></h3>
+    <div style="padding:20px">
+        <select  class="form-control" (change)= "getSearchResults($event)">
+                <option value="">select</option>
+                <option *ngFor="let d of this.data3" value="{{d.rId}}">{{d.HospName}}</option>
+                                     
+        </select>
+      </div>
+      <p>
+              {{this.data[0].HospPhNum}}
+                <!-- {{item.bloodlevel}}
+                {{item.status}} -->
+      </p>
+
+  </div>
+</div>
+                        
+
+</div>
+<br>
+<div class="row">
+        <div class="round1 px-md-2" style="height:300px;width:350px;background-color: #F7F7F7; overflow: scroll;">
+                <div style="text-align:left;">
+                  <h3><u>NOTIFICATION</u></h3>
+                  <div style="float:left"style="text-align:left;">
+                   
+                  <span style=" border:1px solid grey;border-radius: 5px;"*ngFor="let item of this.data">&#8226;Date:
+                        <div >
+                    <p>{{item.date}}</p>
+                     Hospital:<p>{{item.HospName}}</p>
+                      Hospital Head:<p>{{item.HospHead}}</p>
+                      NOTIFICATION:<p>{{item.notification}}</p>
+                </div>
+              </span>
+            </div>
+                </div>
+              </div>  
+    </div>
+</div>
+</div>
+<br>

@@ -1,0 +1,74 @@
+<br><br>
+<div class="container">
+    <div class="text-center">
+      <table class="table table-bordered">
+              <thead class="thead-dark"style="text-align:center">
+                <tr>
+                  
+                  <th scope="col">No</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Complaint</th>
+                 
+                  
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of this.data1">
+                 
+                      <td>{{item.cid}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.date}}</td>
+                  <td>{{item.complaint}}</td>                                   
+                  <td>
+                      
+                    <a><button type="button" id="{{item.cid}}" (click)="reply($event)" class="btn btn-primary btn-sm">Reply</button></a>
+                  </td>
+                </tr>
+
+      
+              </tbody>
+  
+      </table>
+  </div> 
+
+  
+</div>
+<br>
+<div class="container">
+  <div class="text-center">
+    <table class="table table-bordered">
+            <thead class="thead-dark"style="text-align:center">
+              <tr>
+                
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Complaint</th>
+                <th scope="col">Date Of Reply</th>
+                <th scope="col">Reply</th>
+                
+                  
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of this.data2">
+               
+                    <td>{{item.cid}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.date}}</td>
+                <td>{{item.complaint}}</td>                                   
+                <td>{{item.dateofreply}}</td>
+                <td>{{item.reply}}</td>
+                
+              </tr>
+
+    
+            </tbody>
+
+    </table>
+</div> 
+
+
+</div>

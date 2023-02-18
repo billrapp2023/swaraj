@@ -1,0 +1,123 @@
+      
+    &nbsp;
+    &nbsp;
+    &nbsp;  
+    &nbsp;
+    &nbsp;
+    &nbsp;  
+      <br>
+     
+        
+        
+      
+            <div class="container">
+         
+                <br>
+                <br>
+                  <div class="input-group">
+                     
+                      <select class="btn btn-mini"id="inputBG" class="form-control  md-4" (change)="getSearchResult($event)">
+                              
+                                      <option selected>Select</option>
+                                      <option value="Apve">A Positive</option>
+                                      <option value="Anve">A Negative</option>
+                                       <option value="Aunk">A Unknown</option>
+                                       <option value="Bpve">B Positive</option>
+                                      <option value="Bnve">B Negative</option>
+                                      <option value="Bunk">B Unknown</option>
+                                       <option value="ABpve">AB Positive</option>
+                                      <option value="ABnve">AB Negative</option>
+                                      <option value="ABunk">AB Unknown</option>
+                                       <option value="Opve">O Positive</option>
+                                      <option value="Onve">O Negative</option>
+                                       <option value="Ounk">O Unknown</option>
+                                        <option value="Unk">Unknown</option>
+                                    
+                          </select>
+      
+                              &nbsp;
+                              &nbsp;
+                             
+      
+                                  
+                             
+                              
+                     
+      
+      
+                      <span class="input-group-btn">
+                              
+                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                         
+                        </span>
+      
+                      
+                  </div>
+                  
+                  </div>
+                  <br>
+                  <!-- <a routerLink="/adddonor"></a> -->
+                      <button type="button" class="btn btn-primary" routerLink="/adddonor" style="margin-left:1349px;">Add Donor</button><br>
+                  <br>
+
+
+                  <!-- <div id="print-section">
+                    
+                     </div>
+                     <button (click)="print()">print</button> -->
+                  <div class="container">
+                    <div id="print-section">
+                          <table class="table table-bordered" *ngIf="!this.flag">
+                                  <thead class="thead-dark">
+                                    <tr>
+                                      <th scope="col">Donor ID</th>
+                                      <th scope="col">Donor Name</th>
+                                      <th scope="col">Address</th>
+                                      <th scope="col">Blood Group</th>
+                                      <th scope="col">Phone Number</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr *ngFor="let item of this.data">
+                                      <td>{{item.did}}</td>
+                                      <td>{{item.Name}}</td>
+                                      <td>{{item.Address}}</td>
+                                      <td>{{item.Bloodgroup}}</td>
+                                      <td>{{item.Contactno}}</td>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                              </div>
+
+                              <button (click)="print()">print</button>
+                  </div>
+        
+        
+
+                  <div class="container"  *ngIf="this.flag">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <strong>Sorry!</strong> No registered donors in this category.
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  </div>
+               
+
+          <br><br>
+          
+
+         
+         
+        
+      <br>
+      <br>
+    
+    
+        
+         
+         
+
+            
+           

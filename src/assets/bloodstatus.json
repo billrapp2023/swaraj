@@ -1,0 +1,58 @@
+[
+    {
+        "name":"A+",
+        "value":"35"
+    }, 
+    {
+        "name":"A-",
+        "value":"45"
+    },
+    {
+        "name":"A Unknown",
+        "value":"25"
+    },
+    
+    {
+        "name":"B+",
+        "value":"55"
+    },
+    
+    {
+        "name":"B-",
+        "value":"35"
+    },
+    {
+        "name":"B Unknown",
+        "value":"45"
+    },
+    {
+        "name":"AB+",
+        "value":"55"
+    },
+    
+    {
+        "name":"AB-",
+        "value":"35"
+    },
+    {
+        "name":"AB Unknown",
+        "value":"45"
+    },
+    {
+        "name":"O+",
+        "value":"55"
+    },
+    
+    {
+        "name":"O-",
+        "value":"35"
+    },
+    {
+        "name":"O Unknown",
+        "value":"45"
+    }
+    
+]
+
+
+

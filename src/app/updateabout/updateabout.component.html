@@ -1,0 +1,29 @@
+<br>
+<div class="container">
+<div class="row">
+    <div class="col">
+        <b>ABOUT US</b>
+    </div>:
+    <div class="col">
+        <textarea class="form-control"cols="65"rows="15"[(ngModel)]="this.aboutus.about"></textarea>
+    </div>
+    <div class="col">
+        <textarea class="form-control"cols="65"rows="15"[(ngModel)]="this.aboutus.about2"></textarea>
+    </div>
+    <div class="form-group">
+        <div class="row">
+          <div class="col"><label for="FormLogo">Logo</label></div>
+          :
+            <div class="col"> 
+                <input type="file" class="form-control-file" id="exampleFormControlFile1"(change)="handleFileSelect($event)">
+            </div>
+             </div>
+          </div>
+</div>    
+</div>
+<br>
+<div class="text-center">
+    <button type="submit" (click)="Submit()" class="btn btn-primary btn-lg">Submit</button>
+  </div>
+<br>
+<br>

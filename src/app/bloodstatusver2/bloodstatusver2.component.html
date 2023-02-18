@@ -1,0 +1,77 @@
+
+      <br>
+      <!-- <div style="float:right;   margin-right: 150px;">
+          <form class="form-inline my-2 my-lg-0">
+             Hospital Name: <select id="inputHospital" class="form-control mr-sm-2" (chnage)="hospitalSelected($event)">
+                  <option selected>Choose...</option>
+                  <option [value]="1">hosp1</option>
+                  <option value="2">hosp2</option>
+                  <option value="3">hosp3</option>
+                </select>
+              
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>   -->
+
+
+          <div class="container">
+          <h3>Hospital Name</h3>
+          <div class="example-block">
+              <div class="example-block__item">
+                  <ngx-select [formControl]="ngxControl"
+                              [allowClear]="true"
+                              [defaultValue]="doNgxDefault()"
+                              [items]="items"
+                              placeholder="No Hospital selected"
+                              (typed)="inputTyped('ngx-select', $event)"
+                              (focus)="doFocus()"
+                              (blur)="doBlur()"
+                              (open)="doOpen()"
+                              (close)="doClose()"
+                              (select)="doSelect($event)"
+                              (remove)="doRemove($event)"
+                              (selectionChanges)="doSelectOptions($event)">
+                  </ngx-select>
+                  <p></p></div>
+                  <!-- <div class="alert alert-secondary">
+                      <pre>{{ngxControl.value | json}}</pre>
+                  </div>
+                  <div>
+                      <button type="button" class="btn btn-primary"
+                              (click)="ngxControl.disabled? ngxControl.enable(): ngxControl.disable()">
+                          {{ngxControl.disabled ? 'Enable' : 'Disable'}}
+                      </button>
+                  </div> -->
+              </div>
+          </div>
+          <a routerLink="/bloodstatusforms">
+          <button type="button" class="btn btn-info" style="width:130px;font-size:14px;letter-spacing:2px;margin-left:1330px;">UPDATE</button>
+        </a>
+
+    
+      <br>
+      <br>
+     <div class="container" style="margin-left:380px;">
+      <div style="display: block;">
+        <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="single"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        (select)="onSelect($event)">
+      </ngx-charts-bar-vertical>
+        </div>
+      </div>
+
+
+
+      
+
+      

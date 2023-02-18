@@ -1,0 +1,25 @@
+<div class="container">
+    <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Donor Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Blood Group</th>
+                <th scope="col">Phone Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of this.data">
+                <td>{{item.No}}</td>
+                <td>{{item.Donor_Name}}</td>
+                <td>{{item.Address}}</td>
+                <td>{{item.Blood_Group}}</td>
+                <td>{{item.Phone_Number}}</td>
+              </tr>
+              
+             
+            </tbody>
+          </table>
+</div>
+

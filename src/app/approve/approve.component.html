@@ -1,0 +1,51 @@
+<br>
+<div class="container" style="margin-left: 200px;">
+<table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">Hospital Name</th>
+        <th scope="col">Hospital Address</th>
+        <th scope="col">Ownership</th>
+        <th scope="col">Hospital Director</th>
+        <th scope="col">Director Emailid</th>
+        <th scope="col">Category</th>
+        <th scope="col">License Number</th>
+        <th scope="col">Year Of Estabilishment</th>
+        <th scope="col">Contact Number</th>
+        <th scope="col">Telephone Number</th>
+        <th scope="col">About</th>
+        <th scope="col">Logo</th>
+        <th>
+         
+        </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of this.data">
+        
+        <td>{{item.no}}</td>
+        <td>{{item.HospName}}</td>
+        <td>{{item.HospAddrs}}</td>
+    
+        
+        <td>{{item.HospOwn}}</td>
+        <td>{{item.HospHead}}</td>
+        <td>{{item.Heademail}}</td>
+      
+        <td>{{item.HospCat}}</td>
+        <td>{{item.HospLicNum}}</td>
+        <td>{{item.YOE}}</td>
+        <td>{{item.HospPhNum}}</td>
+        <td>{{item.HospTel}}</td>
+        <td>{{item.About}}</td>
+        <td><img src="{{item.image}}"></td>
+        <td> <button type="button" class="btn btn-success" id="{{item.rid}}" (click)="aprove($event)">Approve</button> &nbsp;<br>
+          <button type="button" class="btn btn-danger" id="{{item.rid}}" (click)="reject($event)">Reject</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+  
+</div>

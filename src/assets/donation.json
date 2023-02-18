@@ -1,0 +1,43 @@
+[
+    {
+        "no":"1",
+        "dfname":"sasi",
+        "ddob":"12-11-99",
+        "dgender":"female",
+        "dadrs":"12234 house",
+        "dbg":"AB+ve",
+        "bddate":"12-11-19",
+        "nxtbddate":"21-4-20",
+        "dmedical":"piles",
+        "dphn":"9292929211",
+        "rfname":"sebastian",
+        "rdob":"12-11-99",
+        "rgender":"male",
+        "rbg":"sasi",
+        "rmedical":"malaria",
+        "patientid":"1",
+        "drname":"sasi"
+       
+    },
+    
+    {
+        "no":"2",
+        "dfname":"pisasi",
+        "ddob":"13-11-99",
+        "dgender":"male",
+        "dadrs":"122234 house",
+        "dbg":"A+ve",
+        "bddate":"12-11-19",
+        "nxtbddate":"21-4-20",
+        "dmedical":"piles",
+        "dphn":"9292929211",
+        "rfname":"abin sebastian",
+        "rdob":"12-11-99",
+        "rgender":"male",
+        "rbg":"A+ve",
+        "rmedical":"loose motion",
+        "patientid":"2",
+        "drname":"dr.seban"
+       
+    }
+]

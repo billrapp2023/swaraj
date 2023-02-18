@@ -1,0 +1,110 @@
+<br>
+<br>
+
+
+<div class="container">
+
+        <form [formGroup]="registerForm" #form=ngForm (ngSubmit)="onSubmit(form.value)">
+    
+            
+            <div class="form-row">
+        
+                <div class="form-group col">
+                    <br>
+                    <input type="text" placeholder="First Name" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"  pattern="[a-zA-Z][a-zA-Z\s]*"/>
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                        <div *ngIf="f.firstName.errors.pattern">NAME MUST BE IN CHARACTERS</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <br>
+                    <input type="text" placeholder="Last Name" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"  pattern="[a-zA-Z][a-zA-Z\s]*"/>
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                        <div *ngIf="f.lastName.errors.pattern">NAME MUST BE IN CHARACTERS</div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+        
+                <div class="form-group col">
+                    <br>
+                    <input type="date" placeholder="Date of Birth" formControlName="dob" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.dob.errors }" max="1999-01-01" min="1930-01-01"/>
+                    <div *ngIf="submitted && f.dob.errors" class="invalid-feedback">
+                        <div *ngIf="f.dob.errors.required"> Date of Birth is required</div>
+                    </div>
+                </div> 
+    
+                <div class="form-group col">
+                    <br>
+                    <select formControlName="blood" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.blood.errors }">
+                        <option value="">Blood Group</option>
+                        <option value="A+ve">A +ve</option>
+                        <option value="A-ve">A -ve</option>
+                        <option value="B+ve">B +ve</option>
+                        <option value="B-ve">B -ve</option>
+                        <option value="O+ve">O +ve</option>
+                        <option value="O+ve">O +ve</option>
+                        <option value="AB+ve">AB +ve</option>
+                        <option value="AB-ve">AB -ve</option>
+                    </select>
+                    <div *ngIf="submitted && f.blood.errors" class="invalid-feedback">
+                        <div *ngIf="f.blood.errors.required">Blood Group is required</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+            <div class="form-group col">
+                <br>
+                <input type="text" placeholder="Email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.pattern">Email must be a valid email address</div>
+                </div>
+            </div> 
+            <div class="form-group col">
+                <br>
+                <input type="number" placeholder="Phone Number" formControlName="phone" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" minlength="10" maxlength="10" pattern="^\d{10}$"/>
+                <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                    <div *ngIf="f.phone.errors.required">Phone Number is required</div>
+                    <div *ngIf="f.phone.errors.pattern">Phone Number must be in digits and it must be contain 10 digits</div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="form-row">
+                <div class="form-group col">
+                    <br>
+                    <input type="radio" name="gender" value="male" checked formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"/> Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="female" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"/> Female &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="others" formControlName="gender" [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"/> Others 
+                    <div *ngIf="submitted && f.gender.errors" class="invalid-feedback">
+                        <div *ngIf="f.gender.errors.required">Gender is required</div>                        
+                    </div>
+
+                </div>
+                <div class="form-group col">
+                    <br>
+                    <input type="text" placeholder="Adhaar" formControlName="adhaar" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.adhaar.errors }"  pattern="^\d{12}$"/>
+                    <div *ngIf="submitted && f.adhaar.errors" class="invalid-feedback">
+                        <div *ngIf="f.adhaar.errors.required">Salary is required</div>
+                        <div *ngIf="f.adhaar.errors.pattern">please enter a correct value</div>                       
+                    </div>
+                </div>
+           </div>
+
+       
+            <div class="text-center">
+                <br>
+                <button type="submit" class="btn btn-outline-success btnborder">Register</button>
+            </div>
+
+        </form>
+<br>
+<br>
+</div>

@@ -1,0 +1,174 @@
+<form ngNativeValidate #loginForm="ngForm">
+<div class="container">
+    <legend align="center"><h1><b>RECIPIENT DETAILS</b></h1></legend>
+    <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputtrname" class="col">Recipient Name</label>
+                    <div class="col">
+      
+                     </div>
+                     :
+                    <div class="col"> 
+                      <input type="text" class="form-control" id="inputrname" placeholder="enter the name"[(ngModel)]="this.donatn.Rfname"required name="this.donatn.Rfname" [ngModelOptions]="{standalone: true}">
+                    </div> 
+                 </div>   
+             </div>
+    </div>
+    <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputtrage" class="col">Recipient DOB</label>
+                    <div class="col">
+      
+                     </div>
+                     :
+                    <div class="col"> 
+                        <input type="date" class="form-control" id="inputage" placeholder="DD-MM-YY"[(ngModel)]="this.donatn.Rdob"required name="this.donatn.Rdob" [ngModelOptions]="{standalone: true}">
+                    </div> 
+                 </div>   
+             </div>
+    </div>
+    <div class="row">
+            <div class="col">
+                    <div class="form-group row">
+                      <label for="inputrgender" class="col">Recipient Gender</label>
+                    </div>
+            </div>
+            <div class="col">
+    
+            
+            </div>
+            <div class="col">
+    
+            </div>
+            
+            <div class="col"></div>:
+            <div class="col">
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Male"[(ngModel)]="this.donatn.Rgender"required name="this.donatn.Rgender" [ngModelOptions]="{standalone: true}">
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                          </div>  
+            </div>
+            <div class="col">
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Female"[(ngModel)]="this.donatn.Rgender"required name="this.donatn.Rgender" [ngModelOptions]="{standalone: true}">
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+            </div>
+    </div>
+    <div class="row">
+            <div class="col">
+                  <div class="form-group row">
+                      <label for="inputraddress" class="col">Recipient Address</label>
+                      <div class="col">
+        
+                       </div>
+                       :
+                      <div class="col"> 
+                            <textarea class="form-control" id="exampleraddress" rows="3"[(ngModel)]="this.donatn.Raddress"required name="this.donatn.Raddress" [ngModelOptions]="{standalone: true}"></textarea>
+                      </div> 
+                   </div>   
+               </div>
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col"><label for="inputBG">Blood Group</label></div>
+          : 
+          <div class="col"> 
+  
+            
+            <select class="form-control" [(ngModel)]="this.donatn.Rbg"name="this.donatn.Rbg" required [ngModelOptions]="{standalone: true}">
+              <option selected>Select</option>
+              <option value="Apve">A Positive</option>
+              <option value="Anve">A Negative</option>
+               <option value="Aunk">A Unknown</option>
+               <option value="Bpve">B Positive</option>
+              <option value="Bnve">B Negative</option>
+              <option value="Bunk">B Unknown</option>
+               <option value="ABpve">AB Positive</option>
+              <option value="ABnve">AB Negative</option>
+              <option value="ABunk">AB Unknown</option>
+               <option value="Opve">O Positive</option>
+              <option value="Onve">O Negative</option>
+               <option value="Ounk">O Unknown</option>
+                <option value="Unk">Unknown</option>
+            </select>
+          </div>
+         
+      </div>
+        </div>
+    <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputDisease" class="col">Recipient Description</label>
+                    <div class="col">
+      
+                     </div>
+                     :
+                    <div class="col"> 
+                      <input type="text" class="form-control" id="inputDisease" placeholder="enter the Disease"[(ngModel)]="this.donatn.Rdescriptn"required name="this.donatn.Rdescriptn" [ngModelOptions]="{standalone: true}">
+                    </div> 
+                 </div>   
+             </div>
+    </div>
+    <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputpid" class="col">Patient ID</label>
+                    <div class="col">
+      
+                     </div>
+                     :
+                    <div class="col"> 
+                      <input type="text" class="form-control" id="inputpid" placeholder="enter the ID"[(ngModel)]="this.donatn.Patientid"required name="this.donatn.Patientid" [ngModelOptions]="{standalone: true}">
+                    </div> 
+                 </div>   
+             </div>
+    </div>
+    <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputtcnumber" class="col">Contact Number</label>
+                    <div class="col">
+      
+                     </div>
+                     :
+                    <div class="col"> 
+                      <input type="text" class="form-control" id="inputcnumber" placeholder="enter the number"[(ngModel)]="this.donatn.ContactNum"required name="this.donatn.ContactNum" [ngModelOptions]="{standalone: true}">
+                    </div> 
+                 </div>   
+             </div>
+    </div>
+    <div class="row">
+            <div class="col">
+                <div class="form-group row">
+                    <label for="inputdoctor" class="col">Doctor Name</label>
+                    <div class="col">
+      
+                     </div>
+                     :
+                    <div class="col"> 
+                      <input type="text" class="form-control" id="inptdoctor" placeholder="enter the name"[(ngModel)]="this.donatn.DoctorName"required name="this.donatn.DoctorName" [ngModelOptions]="{standalone: true}">
+                    </div> 
+                 </div>   
+             </div>
+            
+    </div>
+    <br>
+    <br>
+    <div class="text-center" >
+            <button type="submit" style="letter-spacing:2px;width:100px;" (click)="Submit()" class="btn btn-primary">Submit</button>
+    </div>
+    
+
+           
+
+            
+                
+           
+    
+
+           
+</div>
+</form>
